@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce80f489-06b2-4a1f-b702-eb6a35ae63f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +47,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "feature/frontend",
+    "git-widget-placeholder": "feature/github-actions",
     "javascript.preferred.runtime.type.id": "node",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
