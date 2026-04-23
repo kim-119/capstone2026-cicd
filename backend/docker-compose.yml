@@ -1,0 +1,39 @@
+services:
+  # 1. 데이터베이스 (MariaDB)
+  db:
+    image: mariadb:latest # 12.2.2를 포함한 최신 버전 사용
+    container_name: yj-db
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: "1234"
+      MARIADB_DATABASE: user_db
+    ports:
+      - "3316:3306"
+    # ✅ 추가: healthcheck로 DB 준비 완료 감지
+    healthcheck:
+      test: [ "CMD", "healthcheck.sh", "--connect", "--innodb_initialized" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # 2. 백엔드 (Spring Boot)
+  backend:
+    image: timeleverage/yj-backend:latest   # ✅ 다운받을 image:태그로 변경
+    container_name: yj-backend
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker    # ✅ 이 설정이 실제로 적용되어야 함
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy       # ✅ DB 완전 준비 후 시작
+
+  # 3. 프론트엔드 (React)
+  frontend:
+    image: timeleverage/yj-frontend:latest  # ✅ 다운받을 image:태그로 변경
+    container_name: yj-frontend
+    ports:
+      - "63342:80"
+    depends_on:
+      - backend

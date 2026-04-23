@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce80f489-06b2-4a1f-b702-eb6a35ae63f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/cd.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -48,7 +51,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/github-cd",
     "javascript.preferred.runtime.type.id": "node",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
